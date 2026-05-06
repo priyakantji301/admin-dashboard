@@ -3,7 +3,7 @@
 A high-performance, responsive administrative interface built with **jQuery** and **AJAX**. This dashboard demonstrates modern frontend practices, including real-time data synchronization, dynamic DOM manipulation, and a unique "Butter Yellow" aesthetic.
 
 ## 🚀 Live Demo
-[Check out the Live Dashboard](https://priyakantji301.github.io/admin-dashboard-jquery/) 
+[Check out the Live Dashboard](https://priyakantji301.github.io/admin-dashboard/) 
 
 ## ✨ Key Features
 *   **Dynamic Data Fetching**: Utilizes AJAX to retrieve live user data from the JSONPlaceholder REST API without page reloads.
