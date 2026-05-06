@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-wrapper">
+    <aside class="sidebar">
+        <div class="brand">VAULT PANEL</div>
+        <nav id="main-nav">
+            <a href="#" class="nav-item active" data-target="users-section">User Management</a>
+            <a href="#" class="nav-item" data-target="logs-section">Security Logs</a>
+            <a href="#" class="nav-item" data-target="api-section">System Metrics</a>
+        </nav>
+        <div class="sidebar-footer">Secure Node: 192.168.1.1</div>
+    </aside>
+
+    <main class="content-area">
+        <section id="users-section" class="tab-content active">
+            <header class="dashboard-header">
+                <div>
+                    <h1>Personnel Directory</h1>
+                    <p>Manage and audit global system access</p>
+                </div>
+                <div class="header-actions">
+                    <input type="text" id="global-search" placeholder="Filter personnel...">
+                    <button id="refresh-data" class="btn-primary">Sync Data</button>
+                </div>
+            </header>
+
+            <div class="stats-row">
+                <div class="stat-card">
+                    <span class="label">Total Records</span>
+                    <span id="user-count" class="value">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="label">API Latency</span>
+                    <span id="latency" class="value">24ms</span>
+                </div>
+                <div class="stat-card">
+                    <span class="label">Uptime</span>
+                    <span class="value health-good">99.9%</span>
+                </div>
+            </div>
+
+            <div id="user-grid" class="user-grid"></div>
+        </section>
+
+        <!-- Hidden Sections -->
+        <section id="logs-section" class="tab-content">
+            <h1>Security Logs</h1>
+            <div class="terminal">Logs synchronized. Monitoring active...</div>
+        </section>
+        
+        <section id="api-section" class="tab-content">
+            <h1>System Status</h1>
+            <div class="stat-card">Main Gateway: Operational</div>
+        </section>
+    </main>
+</div>
+
+<!-- Modal for "Quick View" -->
+<div id="user-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div id="modal-body"></div>
+    </div>
+</div>
+
+<!-- Toast Notifications -->
+<div id="toast-container"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
